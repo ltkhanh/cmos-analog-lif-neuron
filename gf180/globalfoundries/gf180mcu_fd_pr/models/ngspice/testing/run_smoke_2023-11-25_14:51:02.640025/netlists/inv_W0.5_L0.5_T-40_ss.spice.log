@@ -1,0 +1,28 @@
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Note: Compatibility modes selected: hs
+
+
+Circuit: **.subckt inv_tb
+
+Doing analysis at TEMP = -40.000000 and TNOM = -40.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        3.3
+vin                                          0
+vout                                       3.3
+vin#branch                                   0
+vdd#branch                        -3.31003e-12
+
+ Reference value :  2.00000e-14 Reference value :  6.40000e-13 Reference value :  1.96000e-12 Reference value :  9.96000e-12 Reference value :  1.98245e-10
+No. of Data Rows : 432
+tphl                =  1.655284e-11 targ=  2.167044e-10 trig=  2.001515e-10
+tplh                =  6.674503e-12 targ=  1.085230e-10 trig=  1.018485e-10
+(tplh+tphl)/2 = 1.161367e-11
+Note: Simulation executed from .control section 
