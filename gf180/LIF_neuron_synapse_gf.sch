@@ -1,6 +1,6 @@
 <Qucs Schematic 2.1.0>
 <Properties>
-  <View=-62,-16,1767,922,0.941365,0,0>
+  <View=-62,40,1233,1332,0.683437,0,0>
   <Grid=2,2,0>
   <DataSet=LIF_neuron_synapse_gf.dat>
   <DataDisplay=LIF_neuron_synapse_gf.dpl>
@@ -47,10 +47,7 @@
   <R R11 1 830 560 -28 -50 0 2 "300" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "US" 0>
   <R R12 1 910 750 -17 -49 0 2 "1k" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "US" 0>
   <C C6 1 910 370 -26 -53 0 2 "0.1 uF" 1 "" 0 "neutral" 0>
-  <SpiceInclude Design 1 15 534 -33 16 0 0 "/home/ltk/bigfile/myData/Bao_cao/Hoc_hanh/PHD/1.Designs/spice/globalfoundries/gf180mcu_fd_pr/models/ngspice/design.ngspice" 0 "" 0 "" 0 "" 0 "" 0>
   <SpicePar Parameter 1 10 698 -28 16 0 0 "len=280n" 1 "vdd=3.3" 1>
-  <SpiceLib GlobalFoundries_180 1 -6 620 -12 16 0 0 "/home/ltk/bigfile/myData/Bao_cao/Hoc_hanh/PHD/1.Designs/spice/globalfoundries/gf180mcu_fd_pr/models/ngspice/sm141064.ngspice" 0 "typical" 1>
-  <SpiceInclude PWL_Injection 1 15 225 -33 16 0 0 "/home/ltk/bigfile/myData/Bao_cao/Hoc_hanh/PHD/1.Designs/spice/injection.pwl" 0 "" 0 "" 0 "" 0 "" 0>
   <.TR TR1 1 176 614 0 68 0 0 "lin" 0 "0" 1 "50ms" 1 "50001" 0 "Trapezoidal" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "yes" 0 "0" 0>
   <MOS_SPICE X5 1 340 470 18 6 1 2 "X" 0 "4" 0 "nmos" 0 "nmos_3p3" 1 "+l=len" 1 "+w=5*len" 1 "" 0 "" 0>
   <MOS_SPICE X1 1 390 402 9 -76 0 0 "X" 0 "4" 0 "nmos" 0 "nmos_3p3" 1 "+ l=len" 1 "+ w=50*len" 1 "" 0 "" 0>
@@ -58,6 +55,9 @@
   <MOS_SPICE X4 1 590 226 8 2 0 0 "X" 0 "4" 0 "pmos" 0 "pmos_3p3" 1 "+l=len" 1 "+ w=355*len" 1 "" 0 "" 0>
   <MOS_SPICE X3 1 590 400 8 -77 0 0 "X" 0 "4" 0 "nmos" 0 "nmos_3p3" 1 "+l=len" 1 "+ w=26*len" 1 "" 0 "" 0>
   <MOS_SPICE X6 1 175 300 -156 0 0 1 "X" 0 "4" 0 "pmos" 0 "pmos_3p3" 1 "+l=len" 1 "+w=30*len" 1 "" 0 "" 0>
+  <SpiceLib GlobalFoundries_180 1 -6 620 -12 16 0 0 "/home/ltk/bigfile/myData/Bao_cao/Hoc_hanh/PHD/1.Designs/cmos-analog-lif-neuron/gf180/globalfoundries/gf180mcu_fd_pr/models/ngspice/sm141064.ngspice" 0 "typical" 1>
+  <SpiceInclude Design 1 15 534 -33 16 0 0 "/home/ltk/bigfile/myData/Bao_cao/Hoc_hanh/PHD/1.Designs/cmos-analog-lif-neuron/gf180/globalfoundries/gf180mcu_fd_pr/models/ngspice/design.ngspice" 0 "" 0 "" 0 "" 0 "" 0>
+  <SpiceInclude PWL_Injection 1 15 225 -33 16 0 0 "/home/ltk/bigfile/myData/Bao_cao/Hoc_hanh/PHD/1.Designs/cmos-analog-lif-neuron/injection.pwl" 0 "" 0 "" 0 "" 0 "" 0>
 </Components>
 <Wires>
   <960 170 980 170 "" 0 0 0 "">
@@ -158,13 +158,13 @@
   <940 370 940 370 "Post2" 940 350 0 "">
 </Wires>
 <Diagrams>
-  <Rect 1298 390 422 366 3 #c0c0c0 2 00 1 0 0.005 0.05 1 -0.18 0.5 2 1 -1 0.2 1 315 0 225 1 0 0 "Time" "" "">
+  <Rect 124 1238 422 366 3 #c0c0c0 2 00 1 0 0.005 0.05 1 -0.18 0.5 2 1 -1 0.2 1 315 0 225 1 0 0 "Time" "" "">
 	<"ngspice/tran.v(injection)" #613583 1 3 0 0 0>
 	<"ngspice/tran.v(membrane)" #ff0000 4 3 0 0 0>
 	<"ngspice/tran.v(trigger)" #26a269 4 3 0 0 0>
 	<"ngspice/tran.v(action)" #0000ff 4 3 0 0 0>
   </Rect>
-  <Rect 1298 828 422 365 3 #c0c0c0 2 00 0 0.021 0.001 0.03 1 -0.133131 0.2 1.46706 1 -1 0.2 1 315 0 225 1 0 0 "Time" "" "">
+  <Rect 764 1236 422 365 3 #c0c0c0 2 00 0 0.021 0.001 0.03 1 -0.133131 0.2 1.46706 1 -1 0.2 1 315 0 225 1 0 0 "Time" "" "">
 	<"ngspice/tran.v(post1)" #000000 4 3 0 0 0>
 	<"ngspice/tran.v(post2)" #0000ff 4 3 0 0 0>
 	<"ngspice/tran.v(post3)" #613583 4 3 0 0 0>
@@ -195,17 +195,17 @@
   <Text 890 390 13 #1a5fb4 0 "Chemical\nsynapse 2">
   <Text 870 760 13 #1a5fb4 0 "Electrical\nsynapse 2">
   <Text 800 580 13 #1a5fb4 0 "Electrical\nsynapse 1">
-  <Text 1420 30 15 #1a5fb4 0 "Cell's operation">
-  <Text 1430 470 15 #1a5fb4 0 "Synapse spikes\n">
-  <Text 1318 130 12 #613583 0 "Injection">
-  <Text 1526 318 12 #0000ff 0 "Action">
-  <Text 1572 278 12 #a51d2d 0 "Membrane">
-  <Text 1516 88 12 #26a269 0 "Trigger">
-  <Text 1472 548 12 #a51d2d 0 "PreSpike">
-  <Text 1493 725 11 #000000 0 "Post1">
-  <Text 1470 758 12 #0000ff 0 "Post2">
-  <Text 1506 620 12 #613583 0 "Post3">
-  <Text 1608 712 12 #26a269 0 "Post4">
   <Text 450 186 15 #1a5fb4 0 "Firing part">
   <Text 716 336 15 #1a5fb4 0 "Axon">
+  <Text 246 878 15 #1a5fb4 0 "Cell's operation">
+  <Text 144 978 12 #613583 0 "Injection">
+  <Text 352 1166 12 #0000ff 0 "Action">
+  <Text 398 1126 12 #a51d2d 0 "Membrane">
+  <Text 342 936 12 #26a269 0 "Trigger">
+  <Text 896 878 15 #1a5fb4 0 "Synapse spikes\n">
+  <Text 938 956 12 #a51d2d 0 "PreSpike">
+  <Text 959 1133 11 #000000 0 "Post1">
+  <Text 972 1028 12 #613583 0 "Post3">
+  <Text 1074 1120 12 #26a269 0 "Post4">
+  <Text 934 1170 12 #0000ff 0 "Post2">
 </Paintings>
